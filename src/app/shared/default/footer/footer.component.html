@@ -1,68 +1,52 @@
 <footer>
   <div class="container">
-    <!-- ABout -->
-    <div class="about">
-      <img
-        src="../../../../assets/img/logo-removebg.svg"
-        alt="image"
-        class="footer-logo clickable"
-        routerLink="/"
-      />
-      <p>We belive life should be enjoyed to the fullest.</p>
-      <div class="footer-btns">
-        <span class="clickable">
-          <img src="../../../../assets/img/svg/linkedin.svg" alt="" />
-        </span>
-        <span class="clickable">
-          <img src="../../../../assets/img/svg/instagram.svg" alt="" />
-        </span>
-      </div>
-    </div>
-
-    <!-- Posts -->
     <div class="links">
-      <h4 class="uc">Links</h4>
+      <h5 class="links-header">Company</h5>
       <ul>
-        <!-- <li>Who we are</li> -->
         <li routerLink="/about">About us</li>
         <li routerLink="/about">Blog</li>
-        <li routerLink="/about">Partners</li>
-        <li routerLink="/services">Mobile Application</li>
+        <li routerLink="/about">Careers</li>
+        <li routerLink="/about">Security</li>
       </ul>
     </div>
 
-    <!-- Contact -->
-    <div class="address">
-      <h4 class="uc">Office</h4>
-      <div class="address-details">
-        <div>
-          <p>
-            2nd Floor, Union Bank Building, 1 Adeola Odeku street Victoria
-            Island, Lagos. Nigeria.
-          </p>
-        </div>
-      </div>
+    <div class="links">
+      <h5 class="links-header">Products</h5>
+      <ul>
+        <li routerLink="/about">Gemini</li>
+        <li routerLink="/about">Gemini Earn®</li>
+        <li routerLink="/about">Gemini Credit Card</li>
+        <li routerLink="/services">Gemini ActiveTrader®</li>
+        <li routerLink="/services">Gemini Mobile</li>
+      </ul>
     </div>
 
-    <!-- Socials -->
-    <div class="contact">
-      <h4 class="uc">Contact</h4>
-      <div class="contact-details">
-        <div>
-          <p><a href="tel: 0800-227-8466">Phone: (234) 0800-227-8466</a></p>
-        </div>
-        <div>
-          <p>
-            <a href="mailto: wecare@bastionhmo.com"
-              >E-mail: wecare@bastionhmo.com</a
-            >
-          </p>
-        </div>
-      </div>
+    <div class="links">
+      <h5 class="links-header">Support</h5>
+      <ul>
+        <!-- <li>Who we are</li> -->
+        <li routerLink="/about">Help Center</li>
+        <li routerLink="/about">Contact Us</li>
+        <li routerLink="/about">System Status</li>
+        <li routerLink="/services">Areas of Availability</li>
+      </ul>
+    </div>
+
+    <div class="links">
+      <h5 class="links-header">Links</h5>
+      <ul>
+        <li routerLink="/about">Prices</li>
+        <li routerLink="/about">Cryptopedia®</li>
+        <li routerLink="/about">Refer a Friend</li>
+        <li routerLink="/about">Legal Agreements</li>
+        <li routerLink="/services">Privacy Policy</li>
+      </ul>
     </div>
   </div>
   <!-- Copyright -->
   <div class="container">
-    <p class="copyright">© 2016 Gemini. All Rights Reserved.</p>
+    <p class="copyright">
+      © Copyright {{ currentYear }} Gemini Trust Company, LLC..
+    </p>
   </div>
 </footer>

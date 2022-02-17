@@ -88,24 +88,12 @@ textarea {
   background-color: var(--primary-color);
   border: 2px solid transparent;
 }
-/* .dark-blue-btn {
-  background-color: var(--dark-blue-color);
-  color: var(--white-color);
-  border: 2px solid transparent;
+.tert-btn {
+  background-color: rgb(38, 221, 249);
 }
-.dark-blue-btn:hover {
-  background-color: var(--white-color);
-  color: var(--dark-blue-color);
-  border: 2px solid var(--dark-blue-color);
+.tert-btn:hover {
+  background-color: rgb(124, 234, 251);
 }
-.danger-btn {
-  background-color: var(--danger-color);
-  color: var(--white-color);
-  border: 2px solid transparent;
-}
-.danger-btn:hover {
-  background-color: var(--danger-hover-color);
-} */
 /* Buttons ends */
 
 .clickable {

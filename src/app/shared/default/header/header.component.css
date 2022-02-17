@@ -1,5 +1,9 @@
 header {
   box-shadow: var(--box-shadow);
+  position: fixed;
+  width: 100%;
+  z-index: 150;
+  background-color: var(--white-color);
 }
 li {
   cursor: pointer;
@@ -18,9 +22,6 @@ li {
 }
 .header .container {
   justify-content: space-between;
-}
-.logo {
-  display: flex;
 }
 .logo img {
   /* width: 150px;
