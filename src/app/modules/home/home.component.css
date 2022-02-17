@@ -1,0 +1,57 @@
+/* Hero starts */
+.hero {
+  /* background-color: #c9e94833; */
+}
+.hero-details h2 {
+}
+.gb-flex-img img {
+  animation: slideIn 2s cubic-bezier(0.5, 0, 0, 1);
+}
+.gb-flex-img video {
+  width: 340px;
+  height: auto;
+}
+@media only screen and (max-width: 670px) {
+  .ba-flex-img {
+    display: none;
+  }
+}
+sup {
+  font-size: 55%;
+  top: -0.6em;
+}
+ul li {
+  display: flex;
+  align-items: center;
+}
+ul li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+ul li img {
+  margin-right: 1rem;
+}
+.btn {
+  margin-top: 1rem;
+}
+
+/* Hero ends */
+
+/* Keyframes */
+@keyframes slideIn {
+  0% {
+    transform: rotate(45deg);
+    opacity: 0;
+  }
+  25% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}

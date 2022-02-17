@@ -1,0 +1,65 @@
+h4,
+.footer-logo {
+  margin-bottom: 1.5rem;
+}
+ul li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+ul li {
+  cursor: pointer;
+  transition: 0.2s all ease-in;
+}
+a {
+  transition: 0.2s all ease-in;
+}
+ul li:hover,
+a:hover {
+  color: var(--yellow-color);
+}
+p,
+li {
+  font-weight: 400;
+}
+
+footer {
+  background-color: #e5eaf4;
+  /* background-image: url("../../../../assets/img/footer-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat; */
+  padding: 5rem 0 5rem 0;
+}
+@media screen and (min-width: 1200px) {
+  footer {
+    padding-top: 13rem;
+  }
+}
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 2rem;
+}
+.about .footer-btns {
+  margin-top: 1rem;
+}
+.about .footer-btns span {
+  display: inline-flex;
+  margin-right: 0.8rem;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  padding: 0.5rem;
+  transition: 0.2s all ease-in;
+}
+.about .footer-btns span:hover {
+  background-color: var(--yellow-color);
+}
+.social-content a:not(:last-child) {
+  margin-right: 1rem;
+}
+.contact-details {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+footer .copyright {
+  margin-top: 7rem;
+}
