@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DefaultComponent } from './layouts/default/default.component';
 import { HomeComponent } from './modules/home/home.component';
+import { InstitutionsComponent } from './modules/institutions/institutions.component';
 import { PriceComponent } from './modules/price/price.component';
+import { SecurityComponent } from './modules/security/security.component';
 
 const routes: Routes = [
   {
@@ -22,6 +24,22 @@ const routes: Routes = [
         component: PriceComponent,
         data: {
           title: 'Price',
+          description: 'Description Meta Tag Content'
+        }
+      },
+      {
+        path: 'security',
+        component: SecurityComponent,
+        data: {
+          title: 'Security',
+          description: 'Description Meta Tag Content'
+        }
+      },
+      {
+        path: 'institutions',
+        component: InstitutionsComponent,
+        data: {
+          title: 'Institutions',
           description: 'Description Meta Tag Content'
         }
       }

@@ -1,0 +1,71 @@
+.institute-hero {
+  background-image: url("../../../assets/img/institutionals/background-dark-blue-031a8760b65885af91bceca4652277a6.png");
+  background-position: center;
+  background-size: cover;
+  color: var(--white-color);
+  padding: 7% 0;
+}
+.institute-hero-heading {
+  margin: 1rem 0 2rem 0;
+  font-size: clamp(1.5rem, -0.4026rem + 6.2338vw, 3rem);
+}
+.institute-hero-heading i {
+  text-decoration: underline;
+}
+
+/* Institutions Services starts */
+/* gb card starts */
+.gb-card {
+  display: grid;
+  grid-gap: 2rem;
+}
+@media only screen and (min-width: 450px) {
+  .gb-card {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+.gb-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  border-radius: 8px;
+  padding: 24px;
+  cursor: pointer;
+  box-shadow: rgb(26 26 26 / 8%) 0px 0px 28px;
+}
+.institute-services .gb-item-details {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+.institute-services .gb-item-details picture {
+  margin-right: 1rem;
+}
+.institute-services .gb-item img {
+  width: 32px;
+  height: 32px;
+}
+.institute-services .gb-item p {
+  margin-top: 1rem;
+}
+.institute-services .gb-item .learn-more {
+  text-decoration: underline;
+}
+/* ba card ends */
+/* Institutions Services ends */
+
+/* Institutions About starts */
+.institute-about {
+  background-image: url("../../../assets/img/institutionals/background-light-blue-eb5ed8df8c8908301451b49e1d30a659.png");
+  background-position: center;
+  background-size: cover;
+}
+.institute-about .heading h2 {
+  margin-bottom: 1rem;
+}
+.institute-about .heading p:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+/* Institutions About ends */

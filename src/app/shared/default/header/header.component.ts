@@ -16,13 +16,18 @@ export class HeaderComponent implements OnInit {
       subLinks: []
     },
     {
-      name: "About Us",
-      link: "/about",
+      name: "Security",
+      link: "/security",
       subLinks: []
     },
     {
-      name: "Support",
-      link: "/blog",
+      name: "Institutions",
+      link: "/institutions",
+      subLinks: []
+    },
+    {
+      name: "About Us",
+      link: "/about",
       subLinks: []
     },
     {

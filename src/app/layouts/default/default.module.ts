@@ -8,6 +8,7 @@ import { AboutComponent } from 'src/app/modules/about/about.component';
 import { SupportComponent } from 'src/app/modules/support/support.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { RouterModule } from '@angular/router';
+import { InstitutionsComponent } from 'src/app/modules/institutions/institutions.component';
 
 
 
@@ -18,7 +19,8 @@ import { RouterModule } from '@angular/router';
     PriceComponent,
     SecurityComponent,
     AboutComponent,
-    SupportComponent
+    SupportComponent,
+    InstitutionsComponent
   ],
   imports: [
     CommonModule,
