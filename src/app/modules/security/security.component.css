@@ -1,0 +1,20 @@
+/* Security Trust starts */
+.security-trust h1 {
+  margin: 2rem 0;
+}
+.security-trust p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.security-trust {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  text-align: center;
+}
+.security-trust .soc-iso {
+  margin-top: 2rem;
+}
+.security-trust .soc-iso img:not(:last-child) {
+  margin-right: 3rem;
+}
+
+/* Security Trust ends */

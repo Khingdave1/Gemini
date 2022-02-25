@@ -201,3 +201,14 @@ p {
   color: var(--white-color);
 }
 /* gb dark background ends */
+
+/* cryptosecurity-soc and Iso certified starts */
+.soc-iso img {
+  width: 140px;
+}
+@media only screen and (max-width: 670px) {
+  .soc-iso img {
+    width: 80px;
+  }
+}
+/* cryptosecurity-soc and Iso certified ends */

@@ -69,13 +69,7 @@
   padding: 1.5rem 0;
 }
 .about-pillars .certified img {
-  width: 140px;
   margin-right: 2rem;
-}
-@media only screen and (max-width: 670px) {
-  .about-pillars .certified img img {
-    width: 80px;
-  }
 }
 /* About about-pillars ends */
 

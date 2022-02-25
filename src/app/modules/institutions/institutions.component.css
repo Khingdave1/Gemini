@@ -82,13 +82,7 @@
   margin-top: 1rem;
 }
 .institute-about .body-col-2 img {
-  width: 140px;
   margin-right: 2rem;
-}
-@media only screen and (max-width: 670px) {
-  .institute-about .body-col-2 img {
-    width: 80px;
-  }
 }
 @media only screen and (max-width: 960px) {
   .institute-about .gb-flex-content {
