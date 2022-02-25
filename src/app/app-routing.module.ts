@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DefaultComponent } from './layouts/default/default.component';
+import { AboutComponent } from './modules/about/about.component';
 import { HomeComponent } from './modules/home/home.component';
 import { InstitutionsComponent } from './modules/institutions/institutions.component';
 import { PriceComponent } from './modules/price/price.component';
@@ -40,6 +41,14 @@ const routes: Routes = [
         component: InstitutionsComponent,
         data: {
           title: 'Institutions',
+          description: 'Description Meta Tag Content'
+        }
+      },
+      {
+        path: 'about',
+        component: AboutComponent,
+        data: {
+          title: 'About',
           description: 'Description Meta Tag Content'
         }
       }

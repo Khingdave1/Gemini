@@ -19,7 +19,7 @@ li {
 }
 
 footer {
-  background-color: rgb(247, 247, 247);
+  background-color: var(--grey-color1);
   padding: 3rem 0 3rem 0;
 }
 footer .container {

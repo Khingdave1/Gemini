@@ -4,7 +4,7 @@
   --secondary-color: rgb(1, 3, 4);
   --dark-blue-color: #0b2880;
   --white-color: #ffffff;
-  --grey-color: hsl(226, 7%, 62%);
+  --grey-color1: rgb(247, 247, 247);
   --danger-color: #ff2e00;
   --danger-hover-color: #d12600;
   --box-shadow: -5px 8px 28px -13px rgba(150, 146, 146, 1);
@@ -192,4 +192,12 @@ p {
     grid-gap: 2rem;
   }
 }
-/* ba flex ends */
+/* gb flex ends */
+
+/* gb dark background starts */
+.gb-dark-bg {
+  background-color: rgb(26, 28, 29);
+  text-align: center;
+  color: var(--white-color);
+}
+/* gb dark background ends */
