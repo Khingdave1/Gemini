@@ -15,30 +15,26 @@
 
 /* Institutions Services starts */
 /* gb card starts */
-.gb-card {
+.institute-services .gb-card {
   display: grid;
   grid-gap: 2rem;
 }
 @media only screen and (min-width: 450px) {
-  .gb-card {
+  .institute-services .gb-card {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
 }
-.gb-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.institute-services .gb-item {
   background: rgb(255, 255, 255);
   width: 100%;
   border-radius: 8px;
-  padding: 24px;
+  padding: 34px;
   cursor: pointer;
   box-shadow: rgb(26 26 26 / 8%) 0px 0px 28px;
 }
 .institute-services .gb-item-details {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 0.5rem;
 }
 .institute-services .gb-item-details picture {
   margin-right: 1rem;
@@ -52,6 +48,8 @@
 }
 .institute-services .gb-item .learn-more {
   text-decoration: underline;
+  display: block;
+  margin-top: 0.3rem;
 }
 /* ba card ends */
 /* Institutions Services ends */

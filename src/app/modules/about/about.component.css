@@ -35,9 +35,10 @@
   margin-bottom: 1rem;
 }
 .about-pillars .heading .images {
-  justify-content: center;
+  justify-content: space-around;
   margin: 3rem 0;
 }
+
 .about-pillars .heading .images span:not(:last-child) {
   margin-right: 5rem;
 }
@@ -48,8 +49,8 @@
 }
 .about-pillars .details {
   padding: 1.5rem 0;
-  border-top: 2px solid rgb(230, 230, 230);
-  border-bottom: 2px solid rgb(230, 230, 230);
+  border-top: 1px solid rgb(230, 230, 230);
+  border-bottom: 1px solid rgb(230, 230, 230);
   display: grid;
   grid-gap: 2rem;
 }
@@ -71,6 +72,7 @@
 .about-pillars .certified img {
   margin-right: 2rem;
 }
+
 /* About about-pillars ends */
 
 /* About join-mission starts */
