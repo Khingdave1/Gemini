@@ -38,7 +38,7 @@ li {
   margin-right: 1.5rem;
 }
 .nav-item:hover {
-  color: var(--green-color);
+  color: var(---primary-color);
 }
 .get-started .btn {
   padding: 0.5rem 1.5rem;
@@ -51,9 +51,9 @@ li {
   display: none;
 }
 .toggle-menu .menu-bar {
-  width: 1rem;
+  width: 2rem;
   height: 2px;
-  background-color: var(--dark-green-color);
+  background-color: var(--primary-color);
   display: inline-block;
   position: relative;
   transform: translateX(-1rem);
@@ -81,12 +81,12 @@ li {
 .open-menu .menu-bar::before {
   top: 0 !important;
   transform: rotate(135deg);
-  background-color: var(--dark-green-color) !important;
+  background-color: var(--primary-color) !important;
 }
 .open-menu .menu-bar::after {
   top: 0 !important;
   transform: rotate(-135deg);
-  background-color: var(--dark-green-color) !important;
+  background-color: var(--primary-color) !important;
 }
 /* HamBurger ends */
 
@@ -99,7 +99,7 @@ li {
     width: 80%;
     height: 100%;
     padding: 2rem;
-    background-color: var(--dark-green-color);
+    background-color: var(--dark-blue-color);
     color: var(--white-color);
     box-shadow: 0 20px 25px rgba(255, 255, 255, 0.26);
     transition: 0.5s;
