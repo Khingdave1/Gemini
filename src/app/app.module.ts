@@ -3,18 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuthModule } from './layouts/auth/auth.module';
 import { DefaultModule } from './layouts/default/default.module';
-import { ContactComponent } from './modules/contact/contact.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ContactComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DefaultModule
+    DefaultModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
