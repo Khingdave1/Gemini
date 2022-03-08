@@ -8,6 +8,7 @@ import { InstitutionsComponent } from './modules/institutions/institutions.compo
 import { PriceComponent } from './modules/price/price.component';
 import { SecurityComponent } from './modules/security/security.component';
 import { SigninComponent } from './modules/signin/signin.component';
+import { SignupComponent } from './modules/signup/signup.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,14 @@ const routes: Routes = [
         component: SigninComponent,
         data: {
           title: 'Signin',
+          description: 'Description Meta Tag Content'
+        }
+      },
+      {
+        path: 'signup',
+        component: SignupComponent,
+        data: {
+          title: 'Signup',
           description: 'Description Meta Tag Content'
         }
       }

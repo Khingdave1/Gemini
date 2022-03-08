@@ -58,29 +58,3 @@ ul li img {
 .gb-nifty .gb-flex-img img {
   width: 211px;
 }
-/* Gemini nifty ends */
-
-/* Gemini simple starts */
-/* Gemini simple ends */
-
-/* Hero ends */
-
-/* Keyframes */
-/* @keyframes slideIn {
-  0% {
-    transform: rotate(45deg);
-    opacity: 0;
-  }
-  25% {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-  50% {
-    transform: rotate(45deg);
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-} */

@@ -11,14 +11,16 @@
   padding: 6%;
 }
 .auth-title {
-  margin: 1rem 0 2rem 0;
+  margin-bottom: 2rem;
 }
 form {
   display: grid;
   grid-gap: 1.5rem;
 }
 .auth .logo {
-  text-align: center;
+  display: grid;
+  place-items: center;
+  margin-bottom: 1rem;
 }
 /* .auth .form-field label {
 

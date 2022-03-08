@@ -1,32 +1,44 @@
 <div class="auth-container">
   <div class="auth">
-    <img
-      src="../../../assets/img/favicon.ico"
-      alt=""
-      class="clickable"
-      routerLink="/"
-    />
+    <span class="logo">
+      <img
+        src="../../../assets/img/favicon.ico"
+        alt=""
+        class="clickable"
+        routerLink="/"
+      />
+    </span>
     <h2 class="auth-title">Sign in to Gemini</h2>
-    <form>
+    <form (ngSubmit)="signin()" [formGroup]="signinForm">
       <div class="form-field">
         <label for="email">Email Address</label>
         <div class="input-field">
-          <input type="email" />
+          <input type="email" autocomplete="email" formControlName="email" />
         </div>
       </div>
       <div class="form-field">
         <label for="password">Password</label>
         <div class="input-field dis-flex">
-          <input type="password" />
+          <input
+            formControlName="password"
+            [type]="hide ? 'password' : 'text'"
+          />
           <img
-            src="../../../assets/img/svg/bx-show.svg"
-            alt=""
+            [src]="
+              hide
+                ? '../../../assets/img/svg/bx-show.svg'
+                : '../../assets/img/svg/bx-hide.svg'
+            "
             class="clickable"
+            (click)="hide = !hide"
           />
         </div>
       </div>
       <div class="form-footer dis-flex">
-        <button class="btn prim-btn">Sign in</button>
+        <button class="btn prim-btn">
+          <span *ngIf="loading">Loading...</span>
+          <span *ngIf="!loading">Sign in</span>
+        </button>
         <div class="form-footer-extra">
           <p class="clickable">Create new account</p>
           <p class="clickable">Rest your password</p>
