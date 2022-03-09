@@ -37,7 +37,7 @@ ul li img {
   margin: auto;
   padding: 32px;
 }
-.auth-form-area {
+.auth-form {
   width: 100%;
   background-color: var(--white-color);
   padding: 6%;
@@ -45,12 +45,12 @@ ul li img {
 .auth-title {
   margin-bottom: 0.5rem;
 }
-.form-container {
+form {
   display: grid;
   grid-gap: 1.5rem;
   margin-top: 2rem;
 }
-.auth-form-area .logo {
+.auth-form .logo {
   display: grid;
   place-items: center;
   margin-bottom: 1rem;
@@ -60,10 +60,10 @@ ul li img {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
 }
-.auth-form-area .form-field.col-2 {
+.auth-form .form-field.col-2 {
   grid-column: 1 / span 2;
 }
-.auth-form-area .form-field .input-field {
+.auth-form .form-field .input-field {
   width: 100%;
   justify-content: space-between;
   font-size: 16px;
@@ -75,12 +75,12 @@ ul li img {
   border-radius: 12px;
   transition: border-color 0s ease 0s, box-shadow 250ms ease-in-out 0s;
 }
-.auth-form-area .form-field .input-field:hover,
-.auth-form-area .form-field .input-field:active {
+.auth-form .form-field .input-field:hover,
+.auth-form .form-field .input-field:active {
   border-color: rgb(26, 28, 29);
   box-shadow: rgb(26 28 29) 0px 0px 0px 1px;
 }
-.auth-form-area .form-field .input-field input {
+.auth-form .form-field .input-field input {
   width: 100%;
   background-color: transparent;
   border: none;
@@ -88,17 +88,17 @@ ul li img {
   border-radius: 12px;
   padding: 1rem;
 }
-.auth-form-area .form-field .input-field input::placeholder {
+.auth-form .form-field .input-field input::placeholder {
   color: rgb(179, 179, 180);
 }
-.auth-form-area .form-field .input-field img {
+.auth-form .form-field .input-field img {
   padding: 0 1rem;
 }
 
-.auth-form-area .form-footer {
+.auth-form .form-footer {
   justify-content: space-between;
 }
-.auth-form-area .form-footer p {
+.auth-form .form-footer p {
   text-decoration: underline;
   /* cursor: pointer; */
 }
@@ -109,10 +109,10 @@ ul li img {
     display: block;
     flex-basis: 50%;
   }
-  .auth-form-area {
+  .auth-form {
     flex-basis: 50%;
   }
-  .auth-form-area .logo {
+  .auth-form .logo {
     display: none;
   }
 }

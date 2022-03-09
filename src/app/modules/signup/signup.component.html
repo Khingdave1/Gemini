@@ -33,234 +33,233 @@
       </div>
     </div>
   </div>
-  <div class="auth-form" *ngIf="form1">
-    <span class="logo">
-      <img
-        src="../../../assets/img/favicon.ico"
-        alt=""
-        class="clickable"
-        routerLink="/"
-      />
-    </span>
-    <h2 class="auth-title">Create an account</h2>
-    <small>Please enter your name as it appears on official documents.</small>
-    <form>
-      <!-- (ngSubmit)="signup()" [formGroup]="signupForm" -->
-      <div class="form-row">
-        <div class="form-field">
-          <label for="first-name">First name</label>
-          <div class="input-field">
-            <input
-              type="text"
-              placeholder="First name"
-              autocomplete="first-name"
-              formControlName="firstName"
-            />
+  <form class="auth-form-area" (ngSubmit)="signup()" [formGroup]="signupForm">
+    <div *ngIf="form1">
+      <span class="logo">
+        <img
+          src="../../../assets/img/favicon.ico"
+          alt=""
+          class="clickable"
+          routerLink="/"
+        />
+      </span>
+      <h2 class="auth-title">Create an account</h2>
+      <small>Please enter your name as it appears on official documents.</small>
+      <div class="form-container">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="first-name">First name</label>
+            <div class="input-field">
+              <input
+                type="text"
+                placeholder="First name"
+                autocomplete="first-name"
+                formControlName="firstName"
+              />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="middle-name">Middle name</label>
+            <div class="input-field">
+              <input
+                type="text"
+                placeholder="Middle name"
+                autocomplete="middle-name"
+                formControlName="middleName"
+              />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="family-name">Family name</label>
+            <div class="input-field">
+              <input
+                type="text"
+                placeholder="Family name"
+                autocomplete="family-name"
+                formControlName="familyName"
+              />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="phone-number">Phone number</label>
+            <div class="input-field">
+              <input
+                type="tel"
+                placeholder="Phone Number"
+                autocomplete="phone-number"
+                formControlName="phoneNumber"
+              />
+            </div>
+          </div>
+          <div class="form-field col-2">
+            <label for="email">Email Address</label>
+            <div class="input-field">
+              <input
+                type="email"
+                placeholder="E.g gemini@gmail.com"
+                autocomplete="email"
+                formControlName="email"
+              />
+            </div>
+          </div>
+          <div class="form-field col-2">
+            <label for="password">Password</label>
+            <div class="input-field dis-flex">
+              <input
+                placeholder="Password"
+                formControlName="password"
+                [type]="hide ? 'password' : 'text'"
+              />
+              <img
+                [src]="
+                  hide
+                    ? '../../../assets/img/svg/bx-show.svg'
+                    : '../../../assets/img/svg/bx-hide.svg'
+                "
+                class="clickable"
+                (click)="hide = !hide"
+              />
+            </div>
           </div>
         </div>
-        <div class="form-field">
-          <label for="middle-name">Middle name</label>
-          <div class="input-field">
-            <input
-              type="text"
-              placeholder="Middle name"
-              autocomplete="middle-name"
-              formControlName="middleName"
-            />
-          </div>
-        </div>
-        <div class="form-field">
-          <label for="family-name">Family name</label>
-          <div class="input-field">
-            <input
-              type="text"
-              placeholder="Family name"
-              autocomplete="family-name"
-              formControlName="familyName"
-            />
-          </div>
-        </div>
-        <div class="form-field">
-          <label for="phone-number">Phone number</label>
-          <div class="input-field">
-            <input
-              type="tel"
-              placeholder="Phone Number"
-              autocomplete="phone-number"
-              formControlName="phoneNumber"
-            />
-          </div>
-        </div>
-        <div class="form-field col-2">
-          <label for="email">Email Address</label>
-          <div class="input-field">
-            <input
-              type="email"
-              placeholder="E.g gemini@gmail.com"
-              autocomplete="email"
-              formControlName="email"
-            />
-          </div>
-        </div>
-        <div class="form-field col-2">
-          <label for="password">Password</label>
-          <div class="input-field dis-flex">
-            <input
-              placeholder="Password"
-              formControlName="password"
-              [type]="hide ? 'password' : 'text'"
-            />
-            <img
-              [src]="
-                hide
-                  ? '../../../assets/img/svg/bx-show.svg'
-                  : '../../assets/img/svg/bx-hide.svg'
-              "
-              class="clickable"
-              (click)="hide = !hide"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="form-footer dis-flex">
-        <button class="btn prim-btn" (click)="showForm2()">
-          <span>Next</span>
-        </button>
-        <div class="form-footer-extra">
-          <p class="clickable">Account sign in</p>
-          <!-- <p class="clickable">Rest your password</p> -->
-        </div>
-      </div>
-    </form>
-  </div>
-
-  <div class="auth-form" *ngIf="form2">
-    <span class="logo">
-      <img
-        src="../../../assets/img/favicon.ico"
-        alt=""
-        class="clickable"
-        routerLink="/"
-      />
-    </span>
-    <h2 class="auth-title">Enter your address</h2>
-    <small
-      >Please enter your primary address. This is required to verify your
-      identity.</small
-    >
-    <form>
-      <div class="form-row">
-        <div class="form-field">
-          <label for="address">Address</label>
-          <div class="input-field">
-            <input
-              type="text"
-              placeholder="e.g 21B  Coker Street"
-              autocomplete="address"
-              formControlName="address"
-            />
-          </div>
-        </div>
-        <div class="form-field">
-          <label for="middle-name">City/Town/Subdivision</label>
-          <div class="input-field">
-            <input
-              type="text"
-              placeholder="City/Town/Subdivision"
-              autocomplete="city"
-              formControlName="city"
-            />
-          </div>
-        </div>
-        <div class="form-field">
-          <label for="state">State</label>
-          <div class="input-field">
-            <input
-              type="text"
-              placeholder="State"
-              autocomplete="state"
-              formControlName="state"
-            />
-          </div>
-        </div>
-        <div class="form-field">
-          <label for="zip-code">ZIP code</label>
-          <div class="input-field">
-            <input
-              type="text"
-              placeholder="ZIP code"
-              autocomplete="zip-code"
-              formControlName="zipCode"
-            />
+        <div class="form-footer dis-flex">
+          <button class="btn prim-btn" (click)="showForm2()">
+            <span>Next</span>
+          </button>
+          <div class="form-footer-extra">
+            <p class="clickable" routerLink="/signin">Account sign in</p>
+            <!-- <p class="clickable">Rest your password</p> -->
           </div>
         </div>
       </div>
-      <div class="form-footer dis-flex">
-        <button class="btn prim-btn" (click)="showForm3()">
-          <span>Next</span>
-        </button>
-        <div class="form-footer-extra">
-          <p class="clickable">Account sign in</p>
-          <!-- <p class="clickable">Rest your password</p> -->
-        </div>
-      </div>
-    </form>
-  </div>
-
-  <div class="auth-form" *ngIf="form3">
-    <span class="logo">
-      <img
-        src="../../../assets/img/favicon.ico"
-        alt=""
-        class="clickable"
-        routerLink="/"
-      />
-    </span>
-    <h2 class="auth-title">Confirm your identity</h2>
-    <small>Financial regulations require us to collect this information.</small>
-    <form (ngSubmit)="signup()" [formGroup]="signupForm">
-      <div class="form-row">
-        <div class="form-field col-2">
-          <label for="ssn">Social Security Number (SSN)</label>
-          <div class="input-field dis-flex">
-            <input
-              placeholder="text"
-              formControlName="ssn"
-              [type]="hide ? 'password' : 'text'"
-            />
-            <img
-              [src]="
-                hide
-                  ? '../../../assets/img/svg/bx-show.svg'
-                  : '../../assets/img/svg/bx-hide.svg'
-              "
-              class="clickable"
-              (click)="hide = !hide"
-            />
+    </div>
+    <div *ngIf="form2">
+      <span class="logo">
+        <img
+          src="../../../assets/img/favicon.ico"
+          alt=""
+          class="clickable"
+          routerLink="/"
+        />
+      </span>
+      <h2 class="auth-title">Enter your address</h2>
+      <small
+        >Please enter your primary address. This is required to verify your
+        identity.</small
+      >
+      <div class="form-container">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="address">Address</label>
+            <div class="input-field">
+              <input
+                type="text"
+                placeholder="e.g 21B  Coker Street"
+                autocomplete="address"
+                formControlName="address"
+              />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="middle-name">City/Town/Subdivision</label>
+            <div class="input-field">
+              <input
+                type="text"
+                placeholder="City/Town/Subdivision"
+                autocomplete="city"
+                formControlName="city"
+              />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="state">State</label>
+            <div class="input-field">
+              <input
+                type="text"
+                placeholder="State"
+                autocomplete="state"
+                formControlName="state"
+              />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="zip-code">ZIP code</label>
+            <div class="input-field">
+              <input
+                type="text"
+                placeholder="ZIP code"
+                autocomplete="zip-code"
+                formControlName="zipCode"
+              />
+            </div>
           </div>
         </div>
-        <div class="form-field col-2">
-          <label for="dob">Date of birth</label>
-          <div class="input-field">
-            <input
-              type="text"
-              placeholder="MM/DD/YYYY"
-              autocomplete="d0b"
-              formControlName="dob"
-            />
+        <div class="form-footer dis-flex">
+          <span class="btn prim-btn" (click)="showForm3()"> Next </span>
+          <div class="form-footer-extra">
+            <p class="clickable">Account sign in</p>
+            <!-- <p class="clickable">Rest your password</p> -->
           </div>
         </div>
       </div>
-      <div class="form-footer dis-flex">
-        <button class="btn prim-btn">
-          <span *ngIf="loading">Loading...</span>
-          <span *ngIf="!loading">Submit</span>
-        </button>
-        <div class="form-footer-extra">
-          <p class="clickable">Account sign in</p>
-          <!-- <p class="clickable">Rest your password</p> -->
+    </div>
+    <div *ngIf="form3">
+      <span class="logo">
+        <img
+          src="../../../assets/img/favicon.ico"
+          alt=""
+          class="clickable"
+          routerLink="/"
+        />
+      </span>
+      <h2 class="auth-title">Confirm your identity</h2>
+      <small
+        >Financial regulations require us to collect this information.</small
+      >
+      <div class="form-container">
+        <div class="form-row">
+          <div class="form-field col-2">
+            <label for="ssn">Social Security Number (SSN)</label>
+            <div class="input-field dis-flex">
+              <input
+                placeholder="text"
+                formControlName="ssn"
+                [type]="hide ? 'password' : 'text'"
+              />
+              <img
+                [src]="
+                  hide
+                    ? '../../../assets/img/svg/bx-show.svg'
+                    : '../../assets/img/svg/bx-hide.svg'
+                "
+                class="clickable"
+                (click)="hide = !hide"
+              />
+            </div>
+          </div>
+          <div class="form-field col-2">
+            <label for="dob">Date of birth</label>
+            <div class="input-field">
+              <input
+                type="text"
+                placeholder="MM/DD/YYYY"
+                autocomplete="d0b"
+                formControlName="dob"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="form-footer dis-flex">
+          <button class="btn prim-btn">
+            <span *ngIf="loading">Loading...</span>
+            <span *ngIf="!loading">Submit</span>
+          </button>
+          <div class="form-footer-extra">
+            <p class="clickable">Account sign in</p>
+            <!-- <p class="clickable">Rest your password</p> -->
+          </div>
         </div>
       </div>
-    </form>
-  </div>
+    </div>
+  </form>
 </div>

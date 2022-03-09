@@ -1,5 +1,5 @@
 <div class="auth-container">
-  <div class="auth">
+  <div class="auth-form-area">
     <span class="logo">
       <img
         src="../../../assets/img/favicon.ico"
@@ -8,7 +8,7 @@
         routerLink="/"
       />
     </span>
-    <h2 class="auth-title">Sign in to Gemini</h2>
+    <h2 class="auth-form-area-title">Sign in to Gemini</h2>
     <form (ngSubmit)="signin()" [formGroup]="signinForm">
       <div class="form-field">
         <label for="email">Email Address</label>
@@ -40,7 +40,9 @@
           <span *ngIf="!loading">Sign in</span>
         </button>
         <div class="form-footer-extra">
-          <p class="clickable">Create new account</p>
+          <p class="clickable" routerLink="/signin/signup">
+            Create new account
+          </p>
           <p class="clickable">Rest your password</p>
         </div>
       </div>
