@@ -72,8 +72,12 @@ export class SignupComponent implements OnInit {
       dob: this.signupForm.value.dob,
     }
 
+
     await this.firebaseService.createUser(payload.emailAddress, payload.password, payload)
       .then(res => {
+
+        // Navigate user to dashboard
+        this.router.navigate(['/dashboard'])
 
       }).catch(err => {
         this.errorMessage = err.message
@@ -83,7 +87,6 @@ export class SignupComponent implements OnInit {
     if (this.firebaseService.isLogggedIn === true) {
       this.isSignedin = true
       // Navigate to Dashboard
-      // this.router.navigate(['dashboard'])
     }
   }
   showForm2() {

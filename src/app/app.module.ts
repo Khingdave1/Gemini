@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
 import { AuthModule } from './layouts/auth/auth.module';
 import { DefaultModule } from './layouts/default/default.module';
+import { DashboardModule } from './layouts/dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { DefaultModule } from './layouts/default/default.module';
     AppRoutingModule,
     DefaultModule,
     AuthModule,
+    DashboardModule,
     AngularFireModule.initializeApp(environment.firebaseConfig)
 
   ],
