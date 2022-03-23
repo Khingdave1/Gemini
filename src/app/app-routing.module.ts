@@ -4,6 +4,7 @@ import { AuthComponent } from './layouts/auth/auth.component';
 import { DashboardComponent } from './layouts/dashboard/dashboard.component';
 import { DefaultComponent } from './layouts/default/default.component';
 import { AboutComponent } from './modules/about/about.component';
+import { AccountComponent } from './modules/dashboard/account/account.component';
 import { OverviewComponent } from './modules/dashboard/overview/overview.component';
 import { ReceiveComponent } from './modules/dashboard/receive/receive.component';
 import { SendComponent } from './modules/dashboard/send/send.component';
@@ -92,6 +93,14 @@ const routes: Routes = [
         component: OverviewComponent,
         data: {
           title: 'Overview',
+          description: 'Description Meta Tag Content'
+        }
+      },
+      {
+        path: 'account',
+        component: AccountComponent,
+        data: {
+          title: 'Account',
           description: 'Description Meta Tag Content'
         }
       },
