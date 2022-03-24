@@ -17,14 +17,14 @@ import { SignupComponent } from './modules/signup/signup.component';
 
 const routes: Routes = [
   {
-    path: 'signin',
+    path: '',
     component: AuthComponent,
     children: [
       {
-        path: '',
+        path: 'signin',
         component: SigninComponent,
         data: {
-          title: 'Signin',
+          title: 'Sign in',
           description: 'Description Meta Tag Content'
         }
       },
@@ -32,7 +32,7 @@ const routes: Routes = [
         path: 'signup',
         component: SignupComponent,
         data: {
-          title: 'Signup',
+          title: 'Sign up',
           description: 'Description Meta Tag Content'
         }
       }
