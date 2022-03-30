@@ -15,9 +15,7 @@ export class SignupComponent implements OnInit {
   error = '';
   isSignedin: boolean = false;
   errorMessage: string = "";
-  form1: boolean = true;
-  form2: boolean = false;
-  form3: boolean = false;
+  id: any = "form1"
 
   constructor(private firebaseService: FirebaseService, private formBuilder: FormBuilder, private route: ActivatedRoute, private router: Router) { }
 
@@ -35,7 +33,7 @@ export class SignupComponent implements OnInit {
   signupForm: FormGroup = this.formBuilder.group({
     firstName: ['', { validators: [Validators.required], updateOn: "change" }],
     middleName: ['', { validators: [Validators.required], updateOn: "change" }],
-    familyName: ['', { validators: [Validators.required], updateOn: "change" }],
+    lastName: ['', { validators: [Validators.required], updateOn: "change" }],
     phoneNumber: ['', { validators: [Validators.required], updateOn: "change" }],
     email: ['', { validators: [Validators.required, Validators.email], updateOn: "change" }],
     password: ['', { validators: [Validators.required], updateOn: "change" }],
@@ -60,7 +58,7 @@ export class SignupComponent implements OnInit {
     let payload = {
       firstName: this.signupForm.value.firstName,
       middleName: this.signupForm.value.middleName,
-      familyName: this.signupForm.value.familyName,
+      lastName: this.signupForm.value.lastName,
       phoneNumber: this.signupForm.value.phoneNumber,
       emailAddress: this.signupForm.value.email,
       password: this.signupForm.value.password,
@@ -89,17 +87,9 @@ export class SignupComponent implements OnInit {
       // Navigate to Dashboard
     }
   }
-  showForm2() {
-    this.form1 = false
-    this.form2 = true
-    this.form3 = false
+  showForm(ids: any) {
+    this.id = ids
   }
-  showForm3() {
-    this.form1 = false
-    this.form2 = false
-    this.form3 = true
-  }
-
 
 
 }

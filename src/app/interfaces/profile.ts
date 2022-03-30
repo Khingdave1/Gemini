@@ -3,7 +3,7 @@ export interface Profile {
   emailAddress: string;
   firstName: string;
   middleName: string;
-  familyName: number;
+  lastName: number;
   phoneNumber: number;
   address: string;
   city: string;

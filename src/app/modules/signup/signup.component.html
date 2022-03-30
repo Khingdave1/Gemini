@@ -34,7 +34,7 @@
     </div>
   </div>
   <form class="auth-form-area" (ngSubmit)="signup()" [formGroup]="signupForm">
-    <div *ngIf="form1">
+    <div *ngIf="id == 'form1'">
       <span class="logo">
         <img
           src="../../../assets/img/favicon.ico"
@@ -70,13 +70,13 @@
             </div>
           </div>
           <div class="form-field">
-            <label for="family-name">Family name</label>
+            <label for="last-name">Last name</label>
             <div class="input-field">
               <input
                 type="text"
-                placeholder="Family name"
-                autocomplete="family-name"
-                formControlName="familyName"
+                placeholder="Last name"
+                autocomplete="last-name"
+                formControlName="lastName"
               />
             </div>
           </div>
@@ -123,17 +123,17 @@
           </div>
         </div>
         <div class="form-footer dis-flex">
-          <button class="btn prim-btn" (click)="showForm2()">
+          <button class="btn prim-btn" (click)="showForm('form2')">
             <span>Next</span>
           </button>
           <div class="form-footer-extra">
-            <p class="clickable" routerLink="/signin">Account sign in</p>
+            <p class="clickable" routerLink="/auth/signin">Account sign in</p>
             <!-- <p class="clickable">Rest your password</p> -->
           </div>
         </div>
       </div>
     </div>
-    <div *ngIf="form2">
+    <div *ngIf="id == 'form2'">
       <span class="logo">
         <img
           src="../../../assets/img/favicon.ico"
@@ -195,7 +195,7 @@
           </div>
         </div>
         <div class="form-footer dis-flex">
-          <span class="btn prim-btn clickable" (click)="showForm3()">
+          <span class="btn prim-btn clickable" (click)="showForm('form3')">
             Next
           </span>
           <div class="form-footer-extra">
@@ -205,7 +205,7 @@
         </div>
       </div>
     </div>
-    <div *ngIf="form3">
+    <div *ngIf="id == 'form3'">
       <span class="logo">
         <img
           src="../../../assets/img/favicon.ico"

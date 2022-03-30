@@ -17,7 +17,7 @@ import { SignupComponent } from './modules/signup/signup.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'auth',
     component: AuthComponent,
     children: [
       {

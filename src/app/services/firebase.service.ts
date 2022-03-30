@@ -49,7 +49,7 @@ export class FirebaseService {
           emailAddress: payload.emailAddress.toLowerCase(),
           firstName: payload.firstName,
           middleName: payload.middleName,
-          familyName: payload.familyName,
+          lastName: payload.lastName,
           phoneNumber: payload.phoneNumber,
           address: payload.address,
           city: payload.city,
