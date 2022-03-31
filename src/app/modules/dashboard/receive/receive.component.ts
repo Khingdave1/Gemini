@@ -41,10 +41,11 @@ export class ReceiveComponent implements OnInit {
   onEdit(data: any) {
     let payload = {
       recentAmount: this.withdrawForm.value.amount,
+      // Set Total withdrawal
       totalWith: data.totalWith + this.withdrawForm.value.amount
     }
 
-    this.profileService.updateUser(data.id, payload).then(res => {
+    this.profileService.updateUser(data.emailAddress, payload).then(res => {
       this.successMessage = true
 
       // Navigate to Dashboard

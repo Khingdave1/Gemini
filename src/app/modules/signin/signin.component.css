@@ -48,6 +48,7 @@ form {
   background-color: transparent;
   border: none;
   outline: none;
+  font-size: 16px;
 }
 
 .auth-form-area .form-footer {
@@ -56,4 +57,12 @@ form {
 .auth-form-area .form-footer p {
   text-decoration: underline;
   /* cursor: pointer; */
+}
+
+/* Error */
+.error-message {
+  display: none;
+}
+.error-message.show {
+  display: block;
 }

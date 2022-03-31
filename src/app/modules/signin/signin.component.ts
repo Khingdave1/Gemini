@@ -10,12 +10,13 @@ import { FirebaseService } from 'src/app/services/firebase.service';
 })
 export class SigninComponent implements OnInit {
 
-  hide: boolean = true;
-  loading: boolean = false;
-  returnUrl = '';
-  error = '';
-  isSignedin: boolean = false;
-  errorMessage: string = "";
+  hide: boolean = true
+  loading: boolean = false
+  returnUrl = ''
+  isSignedin: boolean = false
+  errorMessage: string = ""
+  showError: boolean = false
+
 
   constructor(private firebaseService: FirebaseService, private formBuilder: FormBuilder, private route: ActivatedRoute, private router: Router) { }
 
@@ -27,6 +28,7 @@ export class SigninComponent implements OnInit {
     } else {
       this.isSignedin = false
     }
+
   }
 
   // Form initialization and validation
@@ -45,22 +47,28 @@ export class SigninComponent implements OnInit {
 
     let payload = {
       emailAddress: this.signinForm.value.email,
-      password: this.signinForm.value.password
+      password: this.signinForm.value.password,
     }
-    console.log(payload)
+
     await this.firebaseService.signinUser(payload)
       .then(res => {
         console.log(res)
+        // Navigate to Dashboard
+        this.router.navigate(['dashboard'])
       }).catch(err => {
-        this.errorMessage = err.message
+        // Show Error
+        this.errorMessage = err
+        this.showError = true
+
+        // Stop loading
         this.loading = false
+
+        console.log(this.errorMessage)
       })
 
     if (this.firebaseService.isLogggedIn === true) {
       this.isSignedin = true
 
-      // Navigate to Dashboard
-      // this.router.navigate(['dashboard'])
     }
   }
 

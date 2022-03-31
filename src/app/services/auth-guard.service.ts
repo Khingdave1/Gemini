@@ -10,7 +10,7 @@ export class AuthGuardService {
   constructor(private auth: AuthService, private router: Router) { }
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     if (!this.auth.isAutheticated()) {
-      this.router.navigate(['/signin'], { queryParams: { routerUrl: state.url } })
+      this.router.navigate(['/auth/signin'], { queryParams: { routerUrl: state.url } })
       return false
 
     }

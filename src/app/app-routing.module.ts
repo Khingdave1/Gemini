@@ -14,6 +14,7 @@ import { PriceComponent } from './modules/price/price.component';
 import { SecurityComponent } from './modules/security/security.component';
 import { SigninComponent } from './modules/signin/signin.component';
 import { SignupComponent } from './modules/signup/signup.component';
+import { AuthGuardService as AuthGuard } from './services/auth-guard.service';
 
 const routes: Routes = [
   {
@@ -94,7 +95,8 @@ const routes: Routes = [
         data: {
           title: 'Overview',
           description: 'Description Meta Tag Content'
-        }
+        },
+        canActivate: [AuthGuard]
       },
       {
         path: 'account',
@@ -102,7 +104,8 @@ const routes: Routes = [
         data: {
           title: 'Account',
           description: 'Description Meta Tag Content'
-        }
+        },
+        canActivate: [AuthGuard]
       },
       {
         path: 'send',
@@ -110,7 +113,8 @@ const routes: Routes = [
         data: {
           title: 'Send',
           description: 'Description Meta Tag Content'
-        }
+        },
+        canActivate: [AuthGuard]
       },
       {
         path: 'receive',
@@ -118,7 +122,8 @@ const routes: Routes = [
         data: {
           title: 'Receive',
           description: 'Description Meta Tag Content'
-        }
+        },
+        canActivate: [AuthGuard]
       }
     ]
   }

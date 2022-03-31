@@ -34,6 +34,9 @@
           />
         </div>
       </div>
+      <span class="error-message rc" [class.show]="showError">{{
+        errorMessage
+      }}</span>
       <div class="form-footer dis-flex">
         <button class="btn prim-btn">
           <span *ngIf="loading">Loading...</span>

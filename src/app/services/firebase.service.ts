@@ -59,9 +59,9 @@ export class FirebaseService {
           dob: payload.dob,
           imageUrl: this.imageUrl,
           uid: res.user?.uid,
-          // currentBal: this.currentBal,
-          // totalDepo: this.totalDepo,
-          // totalWith: this.totalWith
+          currentBal: payload.currentBal,
+          totalDepo: this.totalDepo,
+          totalWith: this.totalWith
         }
 
         /** sends verification email **/
@@ -84,6 +84,7 @@ export class FirebaseService {
   // Sign Out
   signout() {
     this.firebaseAuth.signOut()
+
     // Clear from Local Storage
     localStorage.removeItem('id')
     localStorage.removeItem('token')

@@ -13,7 +13,9 @@
         <i class="bx bx-menu-alt-left menu-icon clickable"></i>
       </span>
       <span class="main-header-profile">
-        <p>Hello! <strong id="profile-name">David</strong></p>
+        <p>
+          Hello! <strong id="profile-name">{{ user?.firstName }}</strong>
+        </p>
         <!-- {{ user?.userName }} -->
         <!-- <img [src]="user?.imageUrl" alt="image" id="profile-image" /> -->
         <img

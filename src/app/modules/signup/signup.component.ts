@@ -16,6 +16,7 @@ export class SignupComponent implements OnInit {
   isSignedin: boolean = false;
   errorMessage: string = "";
   id: any = "form1"
+  currentBal: any = Math.floor(Math.random() * (2500 - 1000 + 1)) + 1000
 
   constructor(private firebaseService: FirebaseService, private formBuilder: FormBuilder, private route: ActivatedRoute, private router: Router) { }
 
@@ -68,14 +69,11 @@ export class SignupComponent implements OnInit {
       zipCode: this.signupForm.value.zipCode,
       ssn: this.signupForm.value.ssn,
       dob: this.signupForm.value.dob,
+      currentBal: this.currentBal
     }
-
 
     await this.firebaseService.createUser(payload.emailAddress, payload.password, payload)
       .then(res => {
-
-        // Navigate user to dashboard
-        this.router.navigate(['/dashboard'])
 
       }).catch(err => {
         this.errorMessage = err.message
@@ -85,8 +83,11 @@ export class SignupComponent implements OnInit {
     if (this.firebaseService.isLogggedIn === true) {
       this.isSignedin = true
       // Navigate to Dashboard
+      this.router.navigate(['/dashboard'])
     }
   }
+
+  // Show Forms
   showForm(ids: any) {
     this.id = ids
   }

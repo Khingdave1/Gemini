@@ -13,4 +13,7 @@ export interface Profile {
   dob: string;
   imageUrl: string;
   uid: string;
+  currentBal: number;
+  totalDepo: number;
+  totalWith: number;
 }
