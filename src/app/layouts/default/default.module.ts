@@ -9,6 +9,8 @@ import { SupportComponent } from 'src/app/modules/support/support.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { InstitutionsComponent } from 'src/app/modules/institutions/institutions.component';
+import { ContactComponent } from 'src/app/modules/contact/contact.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -20,12 +22,15 @@ import { InstitutionsComponent } from 'src/app/modules/institutions/institutions
     SecurityComponent,
     AboutComponent,
     SupportComponent,
-    InstitutionsComponent
+    InstitutionsComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class DefaultModule { }

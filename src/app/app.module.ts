@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment';
 import { AuthModule } from './layouts/auth/auth.module';
 import { DefaultModule } from './layouts/default/default.module';
 import { DashboardModule } from './layouts/dashboard/dashboard.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { DashboardModule } from './layouts/dashboard/dashboard.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     DefaultModule,
     AuthModule,
     DashboardModule,

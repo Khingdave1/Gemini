@@ -4,6 +4,7 @@ import { AuthComponent } from './layouts/auth/auth.component';
 import { DashboardComponent } from './layouts/dashboard/dashboard.component';
 import { DefaultComponent } from './layouts/default/default.component';
 import { AboutComponent } from './modules/about/about.component';
+import { ContactComponent } from './modules/contact/contact.component';
 import { AccountComponent } from './modules/dashboard/account/account.component';
 import { OverviewComponent } from './modules/dashboard/overview/overview.component';
 import { ReceiveComponent } from './modules/dashboard/receive/receive.component';
@@ -80,6 +81,14 @@ const routes: Routes = [
         component: AboutComponent,
         data: {
           title: 'About',
+          description: 'Description Meta Tag Content'
+        }
+      },
+      {
+        path: 'contact',
+        component: ContactComponent,
+        data: {
+          title: 'Contact',
           description: 'Description Meta Tag Content'
         }
       }

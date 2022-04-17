@@ -51,7 +51,7 @@ select:hover {
 }
 .withdraw-sect-body-form {
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 1.5rem;
   margin-top: 1rem;
 }
 .withdraw-sect-body-form input,
