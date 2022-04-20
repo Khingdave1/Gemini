@@ -224,7 +224,7 @@
             <label for="ssn">Social Security Number (SSN)</label>
             <div class="input-field dis-flex">
               <input
-                placeholder="text"
+                placeholder="SSN"
                 formControlName="ssn"
                 [type]="hide ? 'password' : 'text'"
               />
@@ -242,12 +242,7 @@
           <div class="form-field col-2">
             <label for="dob">Date of birth</label>
             <div class="input-field">
-              <input
-                type="text"
-                placeholder="MM/DD/YYYY"
-                autocomplete="d0b"
-                formControlName="dob"
-              />
+              <input type="date" autocomplete="d0b" formControlName="dob" />
             </div>
           </div>
         </div>

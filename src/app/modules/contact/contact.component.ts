@@ -46,8 +46,6 @@ export class ContactComponent implements OnInit {
       subject: this.contactForm.value.subject,
     }
 
-    console.log(payload)
-
     // Post email to dheyved1@gmail.com
     this.http.post('https://formspree.io/f/mwkyraoa', payload).subscribe(
       (response) => this.success = true,

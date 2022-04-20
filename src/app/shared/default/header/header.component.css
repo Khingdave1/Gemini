@@ -92,6 +92,10 @@ li {
 
 /* Media query starts */
 @media screen and (max-width: 870px) {
+  .logo img {
+    width: 124px;
+    height: 25px;
+  }
   .nav-list {
     position: fixed;
     top: 0px;
@@ -99,7 +103,7 @@ li {
     width: 80%;
     height: 100%;
     padding: 2rem;
-    background-color: var(--dark-blue-color);
+    background-color: var(--primary-color);
     color: var(--white-color);
     box-shadow: 0 20px 25px rgba(255, 255, 255, 0.26);
     transition: 0.5s;
@@ -112,6 +116,10 @@ li {
   .toggle-menu {
     display: block;
     margin-left: 2.5rem;
+  }
+  .get-started .btn {
+    font-size: 14px;
+    padding: 0.5rem 1rem;
   }
 }
 /* Media query ends */
