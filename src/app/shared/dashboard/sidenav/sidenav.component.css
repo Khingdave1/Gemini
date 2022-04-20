@@ -8,8 +8,8 @@
 .sidenav-logo img {
   width: 100%;
   height: auto;
-  width: 127px;
-  height: 28px;
+  max-width: 127px;
+  max-height: 28px;
 }
 nav {
   margin-top: 5rem;
