@@ -22,6 +22,7 @@ export class AccountComponent implements OnInit {
       res.forEach((r: any) => {
         let item = r.payload.doc.data() as Profile
         this.user = item
+        console.log(this.user)
       });
     })
   }
