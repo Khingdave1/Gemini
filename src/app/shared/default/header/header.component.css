@@ -18,7 +18,7 @@ li {
 .header .container,
 .logo,
 .nav-list {
-  height: 5rem;
+  height: 7rem;
 }
 .header .container {
   justify-content: space-between;
@@ -26,8 +26,8 @@ li {
 .logo img {
   /* width: 150px;
   height: auto; */
-  width: 127px;
-  height: 28px;
+  width: 87px;
+  height: 87px;
 }
 .nav-list .nav-item {
   line-height: 5rem;
@@ -93,8 +93,8 @@ li {
 /* Media query starts */
 @media screen and (max-width: 870px) {
   .logo img {
-    width: 124px;
-    height: 25px;
+    width: 87px;
+    height: 87px;
   }
   .nav-list {
     position: fixed;
